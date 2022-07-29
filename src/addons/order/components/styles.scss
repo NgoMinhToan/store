@@ -1,0 +1,338 @@
+.order {
+    width: 100%;
+    
+    .order-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        // padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+        
+        .top-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 58, 58, 0.1);
+            background-color: rgba(253, 132, 132, 0.1);
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.1s ease-in-out;
+    
+            &:hover {
+                border: 1px solid rgb(255, 58, 58);
+                background-color: rgba(253, 132, 132, 1);
+                color:white;
+            }
+    
+            .id-detail {
+                display: inline-block;
+            }
+            .date-detail {
+                display: inline-block;
+            }
+        }
+    
+        .center-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid rgba(109, 147, 253, 0.2);
+            background-color: rgba(132, 164, 253, 0.2);
+            border-radius: 0 0 5px 5px;
+            transition: all 0.1s ease-in-out;
+    
+            &:hover {
+                background-color: rgba(132, 164, 253, 0.1);
+                border: 1px solid rgb(109, 148, 253);
+            }
+    
+            .price-detail {
+                flex-grow: 1;
+                
+                span.total-price {
+                    display: inline-block;
+                    color: rgb(248, 76, 76);
+                    font-size: 1.6rem;
+                }
+                span.tax-price {
+                    display: inline-block;
+                    color: rgb(248, 76, 76);
+                    font-size: 1rem;
+                }
+            }
+            .delete-purchase {
+                display: inline-block;
+                color: rgb(255, 50, 50);
+                border: 1px solid rgb(255, 50, 50);
+                padding: 8px;
+                background: transparent;
+                margin-right: 10px;
+                transition: all .1s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(255, 50, 50);
+                    color: white;
+                }
+            }
+            .modify-purchase {
+                display: inline-block;
+                color: rgb(26, 155, 9);
+                border: 1px solid rgb(26, 155, 9);
+                padding: 8px;
+                background: transparent;
+                margin-right: 10px;
+                transition: all .1s ease-in-out;
+                cursor: pointer;
+                height: 100%;
+
+                &:hover {
+                    background-color: rgb(26, 155, 9);
+                    color: white;
+                }
+            }
+            .status-detail {
+                display: inline-block;
+                color: rgb(255, 115, 50);
+                border: 1px solid rgb(255, 115, 50);
+                padding: 8px;
+            }
+            
+            .purchase-detail {
+                width: 100%;
+    
+                .item-detail {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                    border: 1px dashed rgb(176, 195, 250);
+                    transition: all 0.1s ease-in-out;
+    
+                    &:hover {
+                        background-color: rgba(176, 195, 250, 0.1);
+                        border: 1px solid rgb(176, 195, 250);
+                    }
+    
+                    .name-product {
+                        flex-grow: 1;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: calc(100% - 500px);
+                        padding: 3px;
+                        padding-left: 10px;
+                    }
+                    .price-product {
+                        width: 150px;
+                        text-align: center;
+                        color:rgb(102, 76, 248);
+                    }
+                    .quantity-product {
+                        width: 50px;
+                        font-size: .9rem;
+                        color: gray;
+                    }
+                    .total-price-product {
+                        width: 200px;
+                        text-align: center;
+                        color:rgb(248, 76, 76);
+                        font-size: 1.2rem;
+                    }
+                    .total-tax-product {
+                        width: 100px;
+                        text-align: center;
+                        color:rgb(248, 76, 76);
+                        font-size: .8rem;
+                    }
+                }
+
+                .total {
+                    margin-top: 10px;
+                    border: 1px dashed rgb(176, 195, 250);
+                    transition: all 0.1s ease-in-out;
+                    padding: 5px 0;
+                    color:rgb(255, 50, 50);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span:nth-child(1) {
+                        flex-grow: 1;
+                        width: calc(100% - 300px);
+                        padding-left: 10px;
+                    }
+
+                    .tax-value {
+                        width: 100px;
+                        text-align: center;
+                    }
+                    .price-value {
+                        width: 200px;
+                        text-align: center;
+                        font-size: 1.3rem;
+                    }
+
+                    &:hover {
+                        background-color: rgba(176, 195, 250, 0.1);
+                        border: 1px solid rgb(176, 195, 250);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .fixed-data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 58, 58, 0.1);
+        background-color: rgba(253, 132, 132, 0.1);
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            border: 1px solid rgb(255, 58, 58);
+            background-color: rgba(253, 132, 132, 1);
+            color:white;
+        }
+
+        .id-detail {
+            display: inline-block;
+        }
+        .date-detail {
+            display: inline-block;
+        }
+    }
+    .modify-data {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid rgba(109, 147, 253, 0.2);
+        background-color: rgba(132, 164, 253, 0.2);
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            background-color: rgba(132, 164, 253, 0.1);
+            border: 1px solid rgb(109, 148, 253);
+        }
+
+        .item-detail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            border-bottom: 1px dashed rgb(176, 195, 250);
+            width: 100%;
+            
+            .name-product {
+                display: inline-block;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 5px;
+                font-size: 1.1rem;
+            }
+            .quantity {
+                display: inline-block;
+                width: 50px;
+                border: none;
+                background: none;
+                text-align: center;
+            }
+            .price {
+                width: 100px;
+                text-align: center;
+                color:rgb(102, 76, 248);
+            }
+            .tax {
+                width: 100px;
+                text-align: center;
+                color:rgb(248, 76, 76);
+            }
+            .total-price-product {
+                width: 200px;
+                text-align: center;
+                color:rgb(248, 76, 76);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .total-price {
+        margin-top: 10px;
+        line-height: 2rem;
+        font-style: italic;
+        background: rgba(22, 27, 23, 0.2);
+
+        span {
+            color:rgb(248, 76, 76);
+            font-weight: bold;
+        }
+    }
+
+    .btn-action {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding: 10px;
+        background-color: rgba(22, 27, 23, 0.8);
+        transition: all 0.1s ease-in-out;
+        border-radius: 0 0 5px 5px;
+
+        &:hover {
+            background-color: rgba(22, 27, 23, 0.9);
+
+            .save-btn {
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 255, 255);
+            }
+            .cancel-btn {
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 255, 255);
+            }
+        }
+
+        .save-btn {
+            display: inline-block;
+            color: rgb(11, 14, 11);
+            border: 1px solid rgb(9, 14, 9);
+            padding: 8px;
+            background: transparent;
+            margin-right: 10px;
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(70, 199, 76);
+            }
+        }
+        .cancel-btn {
+            display: inline-block;
+            color: rgb(11, 14, 11);
+            border: 1px solid rgb(9, 14, 9);
+            padding: 8px;
+            background: transparent;
+            margin-right: 10px;
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(199, 154, 70);
+            }
+        }
+    }
+}
